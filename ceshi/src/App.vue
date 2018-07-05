@@ -2,11 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
-<<<<<<< HEAD
     <div>ddd</div>
-=======
-    <div>ccc</div>
->>>>>>> 5e531a0b60bef481dc1422b029ac49d9dd6c219a
   </div>
 </template>
 
