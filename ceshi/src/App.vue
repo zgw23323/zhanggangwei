@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <p>测试p标签</p>
-    <img class="img" src="./assets/logo.png">
+    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
