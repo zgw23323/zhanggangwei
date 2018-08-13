@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="Copyright" content="广东有道汽车集团">
+  <title>友道会商城</title>
+  <link rel="shortcut icon" href="./static/i/favicon.ico" type="image/x-icon">
+  <script src=./static/js/jquery.min.js></script>
+  <script src=./static/js/vconsole.min.js></script>
+  <script type="text/javascript">
+    var url = getUrlValue();
+    if(!url['openId']){
+      var redirect_uri = encodeURIComponent('http://www.autoheader.com/wxpay/index.html?orgCode='+url['orgCode']);  
+      if(!url["code"]){//授权第一步，获取code
+        console.log("code=>");
+        location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+url['appid']+"&redirect_uri=" +redirect_uri+ "&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect";
+      }else{//授权第二步,获取access_token
+        // var _url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxaea21d01a17c80d8&secret=SECRET&code="+url["code"]+"&grant_type=authorization_code";
+        var _url = "http://www.autoheader.com/shop/wxpay/resfromwx?appid="+url['appid']+"&code="+url["code"];
+        $.ajax({
+          xhrFields:{
+            withCredentials:true
+          },
+          type : "post",
+          dataType : "json",
+          data : {},
+          contentType : false,
+          cache : false,
+          processData : false,
+          url : _url,
+          success : function(data) {
+            console.log('获取access_token',data);
+            if(data.code=="S_OK"){
+              localStorage.setItem(url['orgCode']+"_openId",data.var.openid);
+              location.href = "http://www.autoheader.com/wxpay/main.html?orgCode="+url['orgCode']+'#/'+url['module'];
+            }else{
+              $('h3').html(data.msg).show();
+            }
+          }
+        });
+      }
+    }else{
+      localStorage.setItem(url['orgCode']+"_openId",data.var.openid);
+      location.href = "http://www.autoheader.com/wxpay/main.html?orgCode="+url['orgCode']+'#/'+url['module'];
+    }
+    
+    //截取地址,转化成json对象
+  function getUrlValue() {
+    var url = url ? url : window.location.href;
+    if (url.indexOf('#') > -1) {
+        url = url.split('#')[0];
+    }
+    var variable = url.split('?')[1];
+    if (!variable) {
+        return null;
+    } else {
+        var value = {};
+        variable = variable.split('&');
+        for (var i = 0, m = variable.length; i < m; i++) {
+            var tempv=variable[i].split('=')[1];
+            if( typeof(tempv)!='undefined' ){
+                if(tempv=='null' || tempv=='undefined'){
+                    tempv='';
+                }
+                tempv=decodeURIComponent(tempv).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                value[variable[i].split('=')[0]] = tempv;
+            }
+        }
+        if(window.location.href.split('#/').length>1){
+          var url2 = window.location.href.split('#/')[1].split('?');
+          if(url2.length>1){
+            var len = url2[1].split('&');
+            for(var j = 0;j < len.length;j++){
+              var tempv=len[j].split('=')[1];
+              if( typeof(tempv)!='undefined' ){
+                  if(tempv=='null' || tempv=='undefined'){
+                      tempv='';
+                  }
+                  tempv=decodeURIComponent(tempv).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                  value[len[j].split('=')[0]] = tempv;
+              }
+            }
+          }
+        }
+        
+        return value;
+    }
+  }
+  </script>
+</head>
+<body id="body">
+  <h3 style="display: none;"></h3>
+</body>
+</html>

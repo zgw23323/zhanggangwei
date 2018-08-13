@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="Copyright" content="广东有道汽车集团">
+  <title></title>
+  <!-- <script src="./static/js/appmsg.js"></script> -->
+  <script src="./static/js/chokui.flexible.min.js"></script>
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/config.js"></script>
+  <script src="./static/js/vconsole.min.js"></script>
+  <script src="./static/js/exif.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <link rel="shortcut icon" href="./static/i/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./static/css/common.css">
+  
+  <script type="text/javascript">
+    var _maq = _maq || [];
+  </script>
+</head>
+<body id="body">
+  <div id="app1"></div>
+  <script src="./static/js/fastclick.js"></script>
+  
+  <script>
+    //判断设备
+    var ua = navigator.userAgent;
+    var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
+    if(isAndroid) {
+      document.getElementById("body").setAttribute('class','android');
+    }else {
+      document.getElementById("body").setAttribute('class','ios');
+    }
+
+  </script>
+
+</body>
+</html>

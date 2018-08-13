@@ -1,0 +1,1363 @@
+body {margin: 0 auto;font-size: .3rem;color:#121212;min-height: 100%;background-color: #f4f4f4;font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; }
+a {text-decoration: none;}
+ul,p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+    list-style-type: none;
+}
+i {
+    display: inline-block;
+}
+textarea {outline: none;}
+input {border: none;outline: none;}
+.c-doc {
+    background-color: #fff;
+    min-height: 100%;
+    padding-bottom: 1rem;
+    max-width: 7.5rem;
+    margin: 0 auto;
+}
+.m-popup-mask {
+    background-color: rgba(0,0,0,.4);
+    position: fixed;
+    z-index: 1500;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.cur {
+    border-bottom: 3px solid #ff3d3d!important;
+}
+.default {
+    background-color: #ff3d3d;
+    padding: .05rem .13rem;
+    color: #fff;
+    font-size: .18rem;
+    border-radius: .05rem;
+    vertical-align: middle;
+}
+.i_flex {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.i_flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.d_fixed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.t_fixed {
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+}
+.fixed_btn {
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-size: .32rem;
+}
+.cancel {
+    background-color: #f0f0f0;
+    color: #333;
+}
+.add {
+    background-color: #ff3d3d;
+    color: #fff;
+}
+.b_btn {
+    width: 6.54rem;
+    height: .96rem;
+    line-height: .96rem;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #ff3d3d;
+    color: #fff;
+    font-size: .36rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 25px 0px #f7c1c1;
+}
+.no_btn {
+    background-color: #bbb !important;
+    box-shadow: 0px 0px 25px 0px #bbb !important;
+}
+/*
+ * myCar
+ */
+.myCar {
+    padding-bottom: 1.1rem;
+    .car_list {
+        background-color: #fff;
+        li {
+            position: relative;
+            padding: .38rem .3rem;
+            // display: flex;
+            // align-items: center;
+            border-bottom: 1px solid #e2e2e2;
+            touch-action: auto !important;
+            .left {
+                width: 1.8rem;
+                height: 1.35rem;
+                background-color: #dce5ea;
+                display: flex;
+                align-items: center;
+                margin-right: .19rem;
+                img {
+                    max-width: 1.8rem;
+                    max-height: 1.35rem;
+                }
+            }
+            .right {
+                .p1 {
+                    font-size: .36rem;
+                    color: #121212;
+                    span {
+                        margin-right: .17rem;
+                    }
+                    
+                }
+                .p2 {
+                    font-size: .24rem;
+                    color: #666;
+                }
+            }
+        }
+        .curBtn {
+            border-bottom: 3px solid #ff3d3d;
+        }
+        
+    }
+      
+    .delete_btn {
+        position: absolute; right: -2.4rem; top: 0;
+        text-align: center;
+        font-size: .28rem;
+        height: 100%;
+        color: #fff;
+        .btn_default {
+            background-color:#999;
+            width: 1.2rem;
+            height: 100%;
+            padding-top: .7rem;
+        }
+        .btn_del {
+            background-color: #ff3d3d;
+            width: 1.2rem;
+            height: 100%;
+            padding-top: .9rem;
+        }
+    }
+    .del {
+        -webkit-animation: itemMoveToLeft .2s ease forwards;
+        animation: itemMoveToLeft .2s ease forwards;
+    }
+    @-webkit-keyframes itemMoveToLeft {
+      to {
+        -webkit-transform: translateX(-2.4rem);
+      }
+    }
+    @keyframes itemMoveToLeft {
+      to { transform: translateX(-2.4rem); }
+    }
+}
+/*
+ * appointmentStore
+ */
+.appointmentStore {
+    font-size: .3rem;
+    color: #333;
+    background-color: #f4f4f4;
+    .nav_top {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        padding: .31rem 0;
+        background-color: #fff;
+        z-index: 9999;
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .item {
+                width: 50%;
+                .dowm {
+                    background: url('../../img/serviceImg/icon_up@3x.png');
+                    width: .34rem;
+                    height: .19rem;
+                    background-size: .34rem .19rem;
+                    vertical-align: middle;
+                    margin-left: .1rem;
+                }
+            }
+            div:nth-of-type(1) {
+                border-right: 1px solid #e2e2e2;
+            }
+        }
+    }
+    .nav_tip {
+        font-size: .36rem;
+        color: #333;
+        z-index: 9999;
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        top: 1.1rem;
+        .area_tip {
+            display: flex;
+            ul {
+                width: 50%;
+                padding-left: .7rem;
+                max-height: 5.9rem;
+                overflow: scroll;
+            }
+            .left {
+                li {
+                    padding: .57rem 0 .57rem .7rem;
+                    border-bottom: 1px solid #e2e2e2;
+                    width: 2.1rem;
+                }
+                li:last-of-type {
+                    border-bottom: none;
+                }
+            }
+            .right {
+                li {
+                    padding-left: .6rem;
+                    margin-bottom: .77rem;
+                }
+                li:first-of-type {
+                    padding-top: .42rem;
+                }
+            }
+            
+        }
+        .brand_tip {
+            padding: 0 .3rem;
+            ul {
+                max-height: 5.9rem;
+                overflow: scroll;
+                li {
+                    border-bottom: 1px solid #e2e2e2;
+                    padding: .35rem .3rem .35rem 1.07rem;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            
+        }
+        .cur_left {
+            width: 0;
+            height: 0; 
+            border-top: .1rem solid transparent; 
+            border-left: .15rem solid #ff3d3d; 
+            border-bottom: .1rem solid transparent;
+            display: inline-block;
+            margin-left: .15rem;
+            vertical-align: middle;
+        }
+        .cur_right {
+            background: url('../../img/icon_gou@3x.png');
+            width: .38rem;
+            height: .27rem;
+            background-size: .38rem .27rem;
+            display: inline-block;
+            margin-left: .8rem;
+        }
+    }
+
+    .store_content {
+        padding-top: 1.1rem;
+        .cur_address {
+            padding: .3rem .36rem;
+            .i_address {
+                background: url('../../img/appointment/address_icon@3x.png');
+                width: .19rem;
+                height: .29rem;
+                background-size: .19rem .29rem;
+                margin-right: .1rem;
+            }
+        }
+        ul {
+            background-color: #fff;
+            font-size: .36rem;
+            color: #121212;
+            li {
+                padding: .48rem .3rem .4rem;
+                border-bottom: 1px solid #e2e2e2;
+                .default {
+                    margin-left: .26rem;
+                }
+                .d_1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: .3rem;
+                }
+                .s_1 {
+                    font-size: .28rem;
+                    color: #666;
+                }
+                p {
+                    font-size: .24rem;
+                    color: #666;
+                }
+            }
+        }
+        
+    }
+}
+/*
+ * buttPersonnel
+ */
+.buttPersonnel {
+    font-size: .36rem;
+    color: #121212;
+    li {
+        background-color: #fff;
+        padding: .45rem .3rem;
+        border-bottom: 1px solid #e2e2e2;
+        .left {
+            margin-right: .3rem;
+            img {
+                width: 1.1rem;
+                height: 1.1rem;
+                border-radius: .15rem;
+            }
+        }
+        .right {
+            .p2 {
+                font-size: .24rem;
+                color: #666;
+                margin-top: .1rem;
+            }
+            .default {
+                margin-left: .23rem;
+            }
+        }
+
+    }
+    
+}
+.no_bor {
+    border-bottom: none !important;
+}
+/*
+ * appointmentSuccess
+ */
+.appointmentSuccess {
+    font-size: .28rem;
+    .content_head {
+        text-align: center;
+        .h_message {
+            padding: .3rem .24rem .3rem .3rem;
+            background-color: #f2dede;
+            font-size: .24rem;
+            color: #ff3d3d;
+            text-align: left;
+        }
+        .d_1 {
+            margin-top: .33rem;
+            margin-bottom: .19rem;
+            .time_logo {
+                background: url('../../img/appointment/time_icon@3x.png');
+                background-size: .88rem .88rem;
+            }
+            .warm_logo {
+                background: url('../../img/appointment/warm_icon@3x.png');
+                background-size: .88rem .88rem;
+            }
+            i {
+                width: .88rem;
+                height: .88rem;
+                
+            }
+        }
+        .d_2 {
+            font-size: .24rem;
+            color: #666;
+            .p1 {
+                margin-bottom: .2rem;
+            }
+            .p2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .s_1,.s_3 {
+                    font-size: .48rem;
+                    font-weight: bold;
+                }
+                .count_down {
+                    display: flex;
+                    align-items: center;
+                }
+                .s_2 {
+                    margin-left: .1rem;
+                    margin-right: .1rem;
+                    color: #121212;
+                }
+                .s_3 {
+                    color: #ff3d3d;
+                }
+            }
+        }
+    }
+    .content_body {
+        font-size: .32rem;
+        margin-top: .3rem;
+        background-color: #fff;
+        padding-bottom: 2.4rem;
+        .item {
+            padding: .3rem;
+            border-bottom: 1px solid #e2e2e2;
+            margin-bottom: .3rem;
+            .i_title {
+                font-size: .24rem;
+                color: #666;
+                i {
+                    margin-right: .09rem;
+                    vertical-align: center; 
+                }
+                .message_logo {
+                    background: url('../../img/appointment/message_icon@3x.png');
+                    width: .26rem;
+                    height: .28rem;
+                    background-size: .26rem .28rem;
+                }
+                .store_logo {
+                    background: url('../../img/appointment/car.png');
+                    width: .32rem;
+                    height: .22rem;
+                    background-size: .32rem .22rem;
+                }
+                .service_logo {
+                    background: url('../../img/appointment/service.png');
+                    width: .3rem;
+                    height: .3rem;
+                    background-size: .3rem .3rem;
+                }
+            }
+            .i_content {
+                padding-left: .36rem;
+                p {
+                    margin-top: .29rem;
+                }
+                .p1 {
+                    font-size: .32rem;
+                }
+                .p2 {
+                    color: #333;
+                    margin-top: .19rem;
+                    font-size: .24rem;
+                }
+            }
+            
+            .package_n {
+                margin-bottom: .19rem;
+            }
+            .package_item {
+                border: 1px solid #e2e2e2;
+                border-radius: .05rem;
+                .p_ul {
+                    padding: .19rem .43rem .19rem .22rem;
+                    p {
+                        font-size: .24rem;
+                        color: #666;
+                        margin-bottom: .28rem;
+                    }
+                    .p_li {
+                        padding-left: .58rem;
+                        li {
+                            margin-bottom: .3rem;
+                        }
+                    }
+                    .p_money {
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+
+                }
+                .package_total {
+                    padding: .22rem;
+                    text-align: right;
+                    background-color: #f2f2f2;
+                    margin-bottom: 0;
+                    font-size: .28rem;
+                    p,div {
+                        margin-bottom: 0;
+                    }
+                    .s_3 {
+                        width: 1rem;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+ * evaluate
+ */
+.evaluate {
+    padding-bottom: .5rem;
+    .e_store {
+        text-align: center;
+        padding-top: .5rem;
+        .store_logo {
+            background: url('../../img/appointment/carLogo.png');
+            width: 1.46rem;
+            height: 1.46rem;
+            background-size: 1.46rem 1.46rem;
+            border: 1px solid #e2e2e2;
+            margin: 0 auto .22rem;
+        }
+        p {
+            font-size: .36rem;
+            color: #212121;
+        }
+        .xin {
+            margin-top: .35rem;
+            margin-bottom: .6rem;
+            .x_cur {
+                background: url('../../img/actionImg/icon_xin_cur@3x.png');
+                background-size: .57rem .54rem;
+            }
+            .no {
+                background: url('../../img/actionImg/icon_xin_no@3x.png');
+                background-size: .57rem .54rem;
+            }
+            span {
+                display: inline-block;
+                width: .57rem;
+                height: .54rem;
+                background-size: .57rem .54rem;
+                margin-right: .2rem;
+            }
+            span:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+    .e_label {
+        padding: 0 .65rem;
+        span {
+            padding: .26rem .38rem;
+            border-radius: 1rem;
+            border: 1px solid #c0c0c0;
+            
+            margin-bottom: .3rem;
+        }
+        span:nth-of-type(3n+2){
+            margin-right: .2rem;
+            margin-left: .2rem;
+        }
+        .l_cur {
+            border: 1px solid #ff3d3d;
+        }
+    }
+    .s_text {
+        padding-left: .3rem;
+        margin-top: .14rem;
+        margin-bottom: .84rem;
+        textarea {
+            height: 3.4rem;
+            max-height: 3.4rem;
+            overflow: scroll;
+            width: 6.9rem;
+            margin: 0 auto;
+            border-radius: .1rem;
+            border: 1px solid #e2e2e2;
+            background-color: #f2f2f2;
+            padding: .3rem .29rem;
+            font-size: .28rem;
+        }
+    }
+}
+/*
+ * appointmentTime
+ */
+.appointmentTime {
+    .data_head {
+        background-color: #fff;
+        font-size: .24rem;
+        display: flex;
+        align-items: center;
+        height: 1.7rem;
+        border-bottom: 3px solid #e2e2e2;
+        z-index: 9999;
+        ul {
+           display: -webkit-box;
+            width: 6.5rem;
+            overflow: scroll;
+            li {
+                width: 1.5rem;
+                padding: .2rem 0;
+                text-align: center;
+                margin-top: .2rem;
+                border-radius: .15rem;
+                p:nth-of-type(1) {
+                    margin-bottom: .1rem;
+                    font-size: .36rem;
+                }
+                p:nth-of-type(2) {
+                    color: #666;
+                }
+            }
+            span {
+                
+            }
+            .d_cur {
+                background-color: #ff3d3d;
+                p {
+                   color: #fff!important; 
+                }
+            }
+        }
+        .d_logo {
+            background: url('../../img/appointment/data_icon@3x.png');
+            width: .37rem;
+            height: .38rem;
+            background-size: .37rem .38rem;
+            margin-top: .6rem;
+        }
+        .d_icon {
+            width: 1rem;
+            text-align: center;
+            box-shadow: -1px 0px 20px 0px #ddd;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+        }
+    }
+    .data_content {
+        background-color: #fff;
+        padding: 2.2rem .3rem .18rem;
+        font-size: .36rem;
+        ul {
+            justify-content: space-between;
+            li {
+                width: 3.28rem;
+                border: 1px solid #e2e2e2;
+                border-radius: .1rem;
+                height: 1.08rem;
+                line-height: 1.08rem;
+                text-align: center;
+                margin-bottom: .3rem;
+            }
+            .no_can {
+               width: 3.3rem;
+               height: 1.1rem;
+               line-height: 1.1rem;
+               background-color: #ddd;
+               color: #666;
+               border:none;
+            }
+            .d_cur {
+                border:1px solid #ff3d3d;
+                color: #ff3d3d;
+            }
+        } 
+    }
+    .time_tip {
+        top:1.7rem;
+        z-index: 9999;
+        background-color: #fff;
+        font-size: .28rem;
+        .week {
+            height: .68rem;
+            line-height: .68rem;
+            padding: 0 .45rem;
+            background-color: #efefef;
+            
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+        .date {
+            .data_title {
+                padding: .37rem .45rem;
+                font-size: .32rem;
+                color: #666;
+                .left {
+                    background: url('../../img/appointment/left_icon@3x.png')no-repeat;
+                    background-size: .18rem .34rem;
+                }
+                .right {
+                    background: url('../../img/appointment/right_icon@3x.png')no-repeat;
+                    background-size: .18rem .34rem;
+                }
+                i {
+                    width: .18rem;
+                    height: .34rem;
+                }
+            }
+        }
+        .date_li {
+            padding: 0 .23rem;
+            li {
+                width: .68rem;
+                height: .68rem;
+                border-radius: 50%;
+                line-height: .68rem;
+                text-align: center;
+                margin-bottom: .23rem;
+                margin-right: .38rem;
+            }
+            li:nth-of-type(7n+7) {
+                margin-right: 0;
+            }
+            .d_cur {
+                background-color: #ff3d3d;
+                color: #fff;
+            }
+            .n_cur {
+                background-color: #ffebeb;
+                color: #ff3d3d;
+            }
+            .u_cur {
+                color: #bbbbbb;
+            }
+        }
+    }
+}
+/*
+ * appointmentService
+ */
+.appointmentService {
+  .car{
+    color: #666;
+    background: #f0f0f0;
+    width: 6.90rem;
+    height: 0.88rem;
+    margin: 0.30rem 0rem 0.10rem 0.30rem;
+    padding: 0.30rem;
+    border: none;
+    border-radius: 0.15rem;
+  }
+  .arrow-r{
+    width: 0.19rem;
+    height: 0.33rem;
+    position: relative;
+    top: 0.30rem;
+    left: -0.50rem;
+  }
+  .ico{
+    width: 0.30rem;
+    height: 0.30rem;
+    position: relative;
+    left: 0.60rem;
+    top: 0.30rem;
+  }
+  .box{
+    color: #999;
+    width: 6.90rem;
+    height: 0.95rem;
+    padding-left: 0.70rem;
+    border:0.01rem solid;
+    border-width: 0rem 0rem 0.01rem 0rem;
+    border-color: #e2e2e2;
+    font-size: 0.36rem;
+    font-family: "宋体";
+  }
+  .font{
+    color: black;
+    padding-left: 0.30rem;
+    font-weight: 800;
+    font-family: 微软雅黑;
+  }
+  .button{
+    color: #fff;
+    background: #ff3d3d;
+    width: 6.55rem;
+    height: 0.96rem;
+    border: none;
+    border-radius: 0.48rem;
+    margin: auto;
+    margin-top: 0.65rem;
+    display: block;
+    font-size: 0.36rem;
+  }
+  .disable{
+    background: #bbb;
+    pointer-events: none; /*禁用鼠标点击事件*/
+  }
+    .head {
+        padding: .39rem .6rem;
+    }
+  
+    .tip_content {
+        padding: 0 .3rem;
+        font-size: 0.36rem;
+        .no_gou {
+            background: url("../../img/appointment/gou_icon1@3x.png");
+            width: .48rem;
+            height: .48rem;
+            background-size: .48rem .48rem;     
+        }
+        .cur_gou {
+            background: url("../../img/appointment/gou_icon@3x.png");
+            width: .48rem;
+            height: .48rem;
+            background-size: .48rem .48rem;
+        }
+        .i_flex_between {
+            border-bottom: 1px solid #e2e2e2;
+            align-items: center;
+            height: 1.28rem;
+            padding: 0 .3rem;
+        }
+    }
+    .b_btn {
+         margin-top: 0.65rem;
+    }
+    .appointment_succes {
+        .yd-popup-content {
+            background-color: #fff;
+        }
+        .popup-content {
+            border-radius: .05rem;
+        }
+        .t_content {
+            font-size: .36rem;
+            text-align: center;
+            .t_top {
+                padding: .65rem;
+            }
+        }
+        .t_s {
+            margin: 0 auto;
+            width: 6.2rem;
+            border-top: 1px solid #e2e2e2;
+            height: 1.1rem;
+            line-height: 1.1rem;
+            color: #ff3d3d;
+        }
+    }
+    .icon_phone {
+        background: url('../../img/appointment/icon_phone@3x.png');
+        width: .23rem;
+        height: .22rem;
+        background-size: .23rem .22rem;
+        margin-left: .18rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    //新UI
+    .windows{
+      background: #fff url('../../img/appointment/img.png') no-repeat;
+      background-size: 7.50rem 0.77rem;
+      width: 7.50rem;
+   }
+   .photo{
+      padding-top: 0.07rem;
+      /*margin-top: 0.07rem;*/
+   }
+   .photo img{
+      width: 1.28rem;
+      height: 1.28rem;
+      margin: auto;
+      margin-top: 0.07rem;
+      border-radius: 1.28rem;
+   }
+   .datum{
+      height: 0.94rem;
+      margin-top: 0.16rem;
+   }
+   .datum-name{
+      color: #121212;
+      text-align: center;
+      font-size: 0.36rem;
+   }
+   .datum-phone{
+      color: #5c5c5c;
+      margin-top: 0.16rem;
+      text-align: center;
+      font-size: 0.28rem;
+   }
+   .datum-logIn{
+      color: #121212;
+      text-align: center;
+      font-size: 0.48rem;
+   }
+   .bottom-box{
+      width: 6.90rem;
+      margin: auto;
+      margin-top: 0.32rem;
+   }
+   .carNumber{
+      color: #666;
+      background: #f0f0f0 url('../../img/appointment/arrow-r.png') no-repeat 6.45rem 0.28rem;
+      background-size: 0.19rem 0.33rem;
+      width: 6.90rem;
+      height: 0.88rem;
+      padding-left: 0.30rem;
+      border-radius: 0.10rem;
+      font-size: 0.36rem;
+      line-height: 0.88rem;
+   }
+   .type{
+      margin-top: 0.40rem;
+   }
+   .type-top{
+      height: 0.40rem;
+      padding-left: 0.30rem;
+      display: flex;
+   }
+   .type-top-title{
+      color: #999;
+      margin-left: 0.08rem;
+      line-height: 0.29rem;
+      font-size: 0.24rem;
+   }
+   .type-top-car{
+      width: 0.32rem;
+      height: 0.22rem;
+   }
+   .type-top-type{
+      width: 0.30rem;
+      height: 0.30rem;
+   }
+   .type-top-date{
+      width: 0.30rem;
+      height: 0.30rem;
+   }
+   .type-top-people{
+      width: 0.34rem;
+      height: 0.28rem;
+   }
+   .type-bottom{
+      display: flex;
+   }
+   .type-bottom-text{
+      color: #121212;
+      background: url('../../img/appointment/arrow-r.png') no-repeat 5.83rem 0.28rem;
+      background-size: 0.19rem 0.33rem;
+      width: 6.28rem;
+      height: 0.88rem;
+      padding-left: 0.08rem;
+      border: 0 solid #e2e2e2;
+      border-bottom-width: 0.01rem;
+      font-size: 0.36rem;
+   }
+   .type-bottom-text-else{
+      color: #121212;
+      background: url('../../img/appointment/arrow-r.png') no-repeat 6.45rem 0.28rem;
+      background-size: 0.19rem 0.33rem;
+      width: 6.90rem;
+      height: 0.88rem;
+      padding-left: 0.30rem;
+      border: 0 solid #e2e2e2;
+      border-bottom-width: 0.01rem;
+      font-size: 0.42rem;
+      font-weight:bold;
+   }
+   .type-bottom-car{
+      background: url('../../img/appointment/car.png') no-repeat 0.30rem;
+      background-size: 0.32rem 0.22rem;
+      width: 0.64rem;
+      height: 0.88rem;
+      border: 0rem solid #e2e2e2;
+      border-bottom-width: 0.01rem;
+   }
+   .type-bottom-type{
+      background: url('../../img/appointment/service.png') no-repeat 0.30rem;
+      background-size: 0.30rem 0.30rem;
+      width: 0.64rem;
+      height: 0.88rem;
+      border: 0rem solid #e2e2e2;
+      border-bottom-width: 0.01rem;
+   }
+   .type-bottom-date{
+      background: url('../../img/appointment/time.png') no-repeat 0.30rem;
+      background-size: 0.30rem 0.30rem;
+      width: 0.64rem;
+      height: 0.88rem;
+      border: 0rem solid #e2e2e2;
+      border-bottom-width: 0.01rem;
+   }
+   .type-bottom-people{
+      background: url('../../img/appointment/people.png') no-repeat 0.30rem;
+      background-size: 0.34rem 0.28rem;
+      width: 0.64rem;
+      height: 0.88rem;
+      border: 0rem solid #e2e2e2;
+      border-bottom-width: 0.01rem;
+   }
+   .post-button{
+      color: #fff;
+      background: #ff3d3d;
+      width: 6.90rem;
+      height: 0.96rem;
+      margin-top: 0.48rem;
+      border: none;
+      border-radius: 0.96rem;
+      font-size: 0.36rem;
+      font-weight:bold;
+   }
+   .ban{
+     background: #bbb;
+     pointer-events: none;
+   }
+   .hide{
+      opacity: 0;
+   }
+}
+/*
+ * perfectInfo
+ */
+.perfectInfo {
+    .branch{  
+        margin-left: 0.30rem;
+        display: flex;
+        font-size:0.32rem;
+      }
+    .title{
+        width: 2.30rem;
+        height: 1.10rem;
+        border: 0.01rem solid #e2e2e2;
+        border-width: 0rem 0rem 0.01rem 0rem;
+        padding-left: 0.10rem;
+        line-height: 1.10rem;
+    }
+    .text{
+        color: #666666;
+        width: 4.60rem;
+        height: 1.10rem;
+        border: 0.01rem solid #e2e2e2;
+        border-width: 0rem 0rem 0.01rem 0rem;
+    }
+    .arrow-d{
+        width: 0.34rem;
+        height: 0.19rem;
+        margin-left: 0.19rem;
+        margin-right: 0.40rem;
+        display: inline;
+    }
+    .arrow-r{
+        width: 0.19rem;
+        height: 0.33rem;
+        margin-top: 0.35rem;
+        margin-left: -0.30rem;
+    }
+    .button{
+        color: #fff;
+        background: #ff3d3d;
+        width:7.50rem;
+        height: 1.10rem;
+        border: none;
+        bottom: 0;
+        position: absolute;
+        font-size: 0.32rem;
+    }
+}
+/*
+ * receiveMessage
+ */
+.receiveMessage {
+    .notice-img{
+        width: 7.50rem;
+        height: 2.60rem;
+    }
+    .notice-title{
+        padding: .50rem 0 0 .30rem;
+    }
+    .notice-title p{
+        font-size: 0.36rem;
+        font-weight: 600;
+    }
+    .notice-title span{
+        color: #8c8c8c;
+        margin-bottom: 0.50rem;
+        display: block;
+        font-size: 0.28rem;
+    }
+    .mation{
+        padding-left: 0.30rem;
+        font-size: 0.30rem;
+    }
+    .mation p{
+        margin-bottom: 0.10rem;
+    }
+    .mation span{
+        margin-top: 0.40rem;
+        margin-bottom: 2.00rem;
+        display: block;
+        font-size: 0.36rem;
+    }
+    .button{
+        color: #fff;
+        background: #3e587d;
+        width: 6.90rem;
+        height: 1.10rem;
+        margin: 0 auto .29rem;
+        display: block;
+        border: none;
+        border-radius: 0.15rem;
+        line-height: 1.1rem;
+        text-align: center;
+    }
+    .saveOther {
+        color: #3e587d;
+        text-align: center;
+        font-size: .32rem;
+    }
+    .absol {
+        padding: .39rem .6rem;
+        font-size: .32rem;
+        color: #666;
+        position: fixed;
+    }
+    .ser-legalfield li {
+        border-bottom: 1px solid #e2e2e2;
+        text-align: center;
+        height: 1.28rem;
+        padding-left: 0;
+    }
+    .ser-legalfield .shop {
+        padding-top: 1.1rem;
+    }
+     
+    .ser-legalfield .shop .currGou {
+        background: url('../../img/appointment/gou_icon2@3x.png');
+        background-size: .48rem .48rem;
+    }
+    .ser-legalfield .shop .gou {
+        background: url('../../img/appointment/gou_icon1@3x.png');
+        background-size: .48rem .48rem;
+    }
+    .ser-legalfield .shop i {
+        display: inline-block;
+        width: .48rem;
+        height: .48rem;
+        margin-right: .3rem;
+    }
+    .ser-legalfield .shop span {
+        padding-left: .3rem;
+        font-size: .36rem;
+    }
+    .mask-white-dialog {
+        z-index: 1600;
+    }
+}
+/*
+ * addCar
+ */
+.addCar {
+    .branch{
+    height: 1.10rem;
+    margin-left: 0.30rem;
+    display: flex;
+  }
+  .title{
+    width: 2.30rem;
+    height: 1.10rem;
+    padding-left: 0.10rem;
+    border: 0.01rem solid #e2e2e2;
+    border-width: 0rem 0rem 0.01rem 0rem;
+    font-size: 0.32rem;
+    line-height: 1.05rem;
+  }
+  .text{
+    width: 4.55rem;
+    height: 1.10rem;
+    border: 0.01rem solid #e2e2e2;
+    border-width: 0rem 0rem 0.01rem 0rem;
+    font-size: 0.32rem;
+    line-height: 1.10rem;
+  }
+  .crude{
+    font-weight: 600;
+  }
+  .arrow-d{
+    width: 0.34rem;
+    height: 0.19rem;
+    margin-left: 0.19rem;
+    display: initial;
+  }
+  .arrow-r{
+    width: 0.19rem;
+    height: 0.33rem;
+    margin-top: 0.35rem;
+    margin-left: -0.35rem;
+  }
+  .button{
+    color: #fff;
+    background: #ff3d3d;
+    width: 7.50rem;
+    height: 1.10rem;
+    border: none;
+    bottom: 0;
+    position: absolute;
+    font-size: 0.32rem;
+  }
+  .disable{
+    background: #bbb;
+    pointer-events: none; /*禁用鼠标点击事件*/
+  }
+  .eject{
+    display: block;
+  }
+}
+/*
+ * appointmentMessage
+ */
+.appointmentMessage {
+    .prompt {
+        background: #f0f0f0;
+        height: 3.30rem;
+        padding: 0.48rem 1.95rem 0rem 1.95rem;
+        text-align: center;
+    }
+    .prompt img {
+        width: 1.10rem;
+        height: 1.10rem;
+        margin: auto;
+    }
+    .prompt p {
+        font-size: 0.36rem;
+        font-weight: 800;
+    }
+    .prompt span {
+        color: #333333;
+        font-size: 0.24rem;
+    }
+    .data {
+        padding: 0.30rem 0rem 0rem 0.30rem;
+    }
+    .data img{
+        width: 0.26rem;
+        height: 0.28rem;
+        display: inline;
+    }
+    .data span{
+        color: #666;
+        margin-left: 0.05rem;
+        font-size: 0.24rem;
+    }
+    .data p{
+        margin: 0.15rem 0rem 0.15rem 0.25rem;
+        font-size: 0.32rem;
+    }
+}
+/*
+ * carList
+ */
+.service .content .c_p {
+    padding: .31rem 0 .31rem .29rem;
+    font-size: .28rem;
+    color: #666;
+}
+.service .serviceCity .s_city ul {
+    background-color: #fff;
+}
+.service .serviceCity .s_city li {
+    border-bottom: 1px solid #e2e2e2;
+    padding: .4rem .3rem;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+ @media all and (max-width: 320px) and (max-height: 480px){
+    .s_dj_instructions {
+        // margin-bottom: 2.6rem;
+    }
+    .serviceCity .letter {
+        top: .2rem !important;
+        overflow: scroll;
+    }
+    .workerHome .w_btn_1 {
+        margin-top: .4rem !important;
+    }
+}
+// @media all and (min-height: 481px) and (max-height: 600px){
+//     .serviceCity .letter {
+//         height: 80% !important;
+//         overflow: scroll;
+//     }
+// }
+.serviceCity .letter li {
+    line-height: normal;
+}
+.serviceCity .car_gou {
+    background: url('../../img/serviceImg/icon_gou_lan@3x.png');
+    display: inline-block;
+    width: .34rem;
+    height: .22rem;
+    background-size: .34rem .22rem;
+    vertical-align: middle;
+    margin-left: 60%;
+}
+.serviceCity .car_fixed_mess {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
+    background-color: #f5f5f5;
+}
+.serviceCity .car_fixed_mess span{
+    font-size: .32rem;
+    color: #ff3d3d;
+}
+.serviceCity .cart_seach {
+    background-color: #fff; 
+    width: 100%;
+    padding: .3rem 0;
+}
+.serviceCity .c_padd {
+    padding: 1.1rem 0 .3rem;
+}
+.serviceCity .cart_seach div {
+    width: 92%;
+    padding: .2rem;
+    margin: 0 auto;
+    border: 1px solid #e2e2e2;
+    border-radius: .15rem;
+}
+.serviceCity .cart_seach input {
+    width: 90%;
+    margin-left: .2rem;
+}
+.serviceCart .letter {
+   width: 1.2rem !important;
+}
+.serviceCart .letter li{
+    width: 1.15rem;
+    height: .56rem;
+    color: #ff3d3d;
+    border-radius: .15rem;
+    border: 1px solid #ff3d3d;
+    text-align: center;
+    line-height: .56rem;
+    margin-bottom: .3rem;
+}
+.serviceCart .letter .s_cur {
+    background-color: #ff3d3d;
+    border: none;
+    box-shadow: 0 0 3px #ff3d3d;
+    color: #fff;
+}

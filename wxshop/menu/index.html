@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="Copyright" content="广东有道汽车集团">
+<script src="js/chokui.flexible.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body> 
+<section class="chok-doc" id='chok-doc'>
+    <div class="chok-doc-inner-2" id="chok-doc-inner-2">
+    	<a class="a4" title="会员首页" href="#">会员首页</a>
+    	<a class="a1" title="会员卡充值" href="#">会员卡充值</a>
+    	<a class="a2" title="友道会商城" href="#">友道会商城</a>
+    	<a class="a3" title="会员中心" href="#">会员中心</a>
+    </div>
+</section>
+<script type="text/javascript">
+	var width_body = document.documentElement.clientWidth;
+	var height_body = document.documentElement.clientHeight;
+	//根据屏幕设置背景图
+	document.getElementById('chok-doc').setAttribute('style','height:'+document.documentElement.clientHeight+'px'+";background-size:100% "+ height_body+'px');
+	if(height_body>1000){//为了兼容大设备
+		document.getElementById('chok-doc-inner-2').setAttribute('style','padding-top:55%;');
+	}
+</script>
+</body>
+</html>

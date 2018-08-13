@@ -1,0 +1,55 @@
+body{
+margin: 0 auto;
+font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; 
+-webkit-user-select: none;
+-webkit-font-smoothing: antialiased;
+}
+.app_down .app_down_bg {
+	width: 7.5rem;
+    margin: auto;
+    margin-bottom: .46rem;
+    height: 10rem;
+}
+.app_down .app_down_bg img {
+	width: 7.5rem;
+	display: block;
+}
+.app_down .common_btn {
+	width: 4.8rem;
+	margin: auto;
+	height: 1rem;
+	margin-bottom: .3rem;
+	border-radius: 1.13rem;
+	display: block;
+}
+.app_down .common_btn img {
+	width: 4.8rem;
+	border-radius: 1.13rem;
+}
+.app_down .ios_btn img {
+	box-shadow: 0 0 .13rem #ff6c00;  
+}
+.app_down .android_btn img {
+	box-shadow:0 0 .13rem #456fff;
+}
+#app_down_pilot {
+	background: url(../img/app_down_pilot.png);
+    width: 7.5rem;
+    background-size: 7.5rem;
+    height: 13.34rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    margin: auto;
+}
+.app_down_code {
+	width: 150px;
+    margin: auto;
+    text-align: center;
+    font-size: .3rem;
+    display: none;
+    // margin-top: .5rem;
+}
+
+
